@@ -2,13 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <script>
+    (function () {
+      if (/github\.io$/i.test(location.hostname)) {
+        var b = document.createElement('base');
+        b.href = '/besa_life_safety/';
+        document.head.appendChild(b);
+      }
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ekavis Addressable Fire Alarm Range | BESA Life Safety</title>
   <meta name="description" content="Authorized Ekavis EN54-certified addressable fire alarm products — control panels, detectors, MCPs, sounders and modules from BESA Life Safety.">
   <link rel="icon" href="assets/favicon.svg">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=20260718">
 </head>
 <body>
   <header class="topbar">
