@@ -1,53 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <script>
-    (function () {
-      if (/github\.io$/i.test(location.hostname)) {
-        var b = document.createElement('base');
-        b.href = '/besa_life_safety/';
-        document.head.appendChild(b);
-      }
-    })();
-  </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ekavis Addressable Fire Alarm Range | BESA Life Safety</title>
-  <meta name="description" content="Authorized Ekavis EN54-certified addressable fire alarm products — control panels, detectors, MCPs, sounders and modules from BESA Life Safety.">
-  <link rel="icon" href="assets/favicon.svg">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css?v=20260718">
-</head>
-<body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <div class="contact"> <i class="fa fa-phone"></i> +91 8956929705 &nbsp; <i class="fa fa-envelope"></i> info@besasafety.com</div>
-      <div class="socials">Follow Us : <a href="#"><i class="fab fa-facebook-f"></i></a> <a href="#"><i class="fab fa-linkedin-in"></i></a> <a href="#"><i class="fab fa-instagram"></i></a></div>
-    </div>
-  </header>
-
-  <nav class="navbar">
-    <div class="container nav-inner">
-      <div class="brand">
-        <a href="index.html"><img src="assets/besa-logo.png" alt="BESA Logo" class="logo"></a>
-      </div>
-      <button id="mobileToggle" class="mobile-toggle" aria-label="Menu"><i class="fa fa-bars"></i></button>
-      <ul class="nav-links">
-        <li><a href="index.html#home">Home</a></li>
-        <li><a href="index.html#about">About Us</a></li>
-        <li class="has-sub"><a class="active" href="index.html#products">Products</a></li>
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="index.html#projects">Projects</a></li>
-        <li><a href="index.html#careers">Careers</a></li>
-        <li><a href="index.html#contact">Contact Us</a></li>
-      </ul>
-      <a class="btn-quote" href="index.html#contact">Get A Quote</a>
-    </div>
-  </nav>
-
-  <main>
-    <section class="eaton-page ekavis-page">
+<section class="eaton-page ekavis-page">
       <div class="container">
         <div class="page-header">
           <div class="page-headline">Authorized Partner</div>
@@ -56,7 +7,7 @@
         </div>
 
         <div class="eaton-brand-bar ekavis-brand-bar">
-          <img src="assets/EKAVIS-logo.png" alt="Ekavis">
+          <img src="<?= asset('assets/EKAVIS-logo.png') ?>" alt="Ekavis">
           <span>A Legacy of Safety &amp; Innovation</span>
           <span class="ekavis-badge">EN 54 CERTIFIED</span>
         </div>
@@ -85,25 +36,25 @@
           <p class="ekavis-section-desc">EKAVIS EN54-certified fire alarm control panels deliver scalable performance for projects of every size. Designed with advanced networking, intuitive operation and modular architecture — from single loop to multi-loop systems.</p>
           <div class="eaton-grid eaton-grid-4">
             <article class="eaton-card">
-              <div class="eaton-card-img"><img src="assets/ekavis/panel-3101.png" alt="EF-EN-3101 Panel"></div>
+              <div class="eaton-card-img"><img src="<?= asset('assets/ekavis/panel-3101.png') ?>" alt="EF-EN-3101 Panel"></div>
               <span class="ekavis-model">EF-EN-3101</span>
               <h4>1 Loop Addressable Fire Alarm Control Panel</h4>
               <p>Compact single-loop addressable panel for smaller installations with clear LCD display and intuitive keypad.</p>
             </article>
             <article class="eaton-card">
-              <div class="eaton-card-img"><img src="assets/ekavis/panel-5102.png" alt="EF-EN-5102 Panel"></div>
+              <div class="eaton-card-img"><img src="<?= asset('assets/ekavis/panel-5102.png') ?>" alt="EF-EN-5102 Panel"></div>
               <span class="ekavis-model">EF-EN-5102/5104</span>
               <h4>4/8 Loop Addressable Fire Alarm Control Panel</h4>
               <p>Scalable multi-loop panel ideal for medium projects with advanced networking and modular architecture.</p>
             </article>
             <article class="eaton-card">
-              <div class="eaton-card-img"><img src="assets/ekavis/panel-5106.png" alt="EF-EN-5106 Panel"></div>
+              <div class="eaton-card-img"><img src="<?= asset('assets/ekavis/panel-5106.png') ?>" alt="EF-EN-5106 Panel"></div>
               <span class="ekavis-model">EF-EN-5106/5108</span>
               <h4>6/8 Loop Addressable Fire Alarm Control Panel</h4>
               <p>High-capacity addressable panel for larger buildings with seamless integration and reliable operation.</p>
             </article>
             <article class="eaton-card">
-              <div class="eaton-card-img"><img src="assets/ekavis/panel-rp.png" alt="EF-EN-RP Repeater"></div>
+              <div class="eaton-card-img"><img src="<?= asset('assets/ekavis/panel-rp.png') ?>" alt="EF-EN-RP Repeater"></div>
               <span class="ekavis-model">EF-EN-RP</span>
               <h4>Addressable Touch Screen Repeater Panel</h4>
               <p>Modern touch screen repeater for remote indication and control with a clear graphical interface.</p>
@@ -117,19 +68,19 @@
           <p class="ekavis-section-desc">EKAVIS detectors combine precision sensing with robust drift compensation for early, reliable fire detection. Smoke, heat and multi-sensors with 360° LED indication help reduce false alarms across the range.</p>
           <div class="eaton-grid">
             <article class="eaton-card">
-              <div class="eaton-card-img"><img src="assets/ekavis/det-asd.png" alt="EF-EN-ASD Smoke Sensor"></div>
+              <div class="eaton-card-img"><img src="<?= asset('assets/ekavis/det-asd.png') ?>" alt="EF-EN-ASD Smoke Sensor"></div>
               <span class="ekavis-model">EF-EN-ASD</span>
               <h4>Intelligent Addressable Smoke Sensor</h4>
               <p>Optical smoke sensor for early warning with drift compensation and 360° LED indication.</p>
             </article>
             <article class="eaton-card">
-              <div class="eaton-card-img"><img src="assets/ekavis/det-ahd.png" alt="EF-EN-AHD Heat Sensor"></div>
+              <div class="eaton-card-img"><img src="<?= asset('assets/ekavis/det-ahd.png') ?>" alt="EF-EN-AHD Heat Sensor"></div>
               <span class="ekavis-model">EF-EN-AHD</span>
               <h4>Intelligent Addressable Heat Sensor</h4>
               <p>Heat sensor for environments where smoke detection is less suitable, with intelligent addressing.</p>
             </article>
             <article class="eaton-card">
-              <div class="eaton-card-img"><img src="assets/ekavis/det-amsd.png" alt="EF-EN-AMSD Multi Sensor"></div>
+              <div class="eaton-card-img"><img src="<?= asset('assets/ekavis/det-amsd.png') ?>" alt="EF-EN-AMSD Multi Sensor"></div>
               <span class="ekavis-model">EF-EN-AMSD</span>
               <h4>Intelligent Addressable Multi Sensor</h4>
               <p>Combined smoke and heat sensing for faster, more accurate detection and fewer false alarms.</p>
@@ -142,7 +93,7 @@
           <h3 class="eaton-section-title"><i class="fa fa-hand-pointer"></i> Manual Call Points (MCPs)</h3>
           <p class="ekavis-section-desc">Surface and flush-mount options with resettable operation, EN54 approvals, LED indication and fire-retardant enclosures — for clear, instant activation in critical situations.</p>
           <div class="eaton-mcp">
-            <div class="eaton-card-img"><img src="assets/ekavis/mcp-en.png" alt="EF-EN-MCP Manual Call Point"></div>
+            <div class="eaton-card-img"><img src="<?= asset('assets/ekavis/mcp-en.png') ?>" alt="EF-EN-MCP Manual Call Point"></div>
             <div>
               <span class="ekavis-model">EF-EN-MCP</span>
               <h4>Addressable Break Glass Call Point</h4>
@@ -157,19 +108,19 @@
           <p class="ekavis-section-desc">Clear, powerful audio-visual alarms in loop-powered and 24V variants. Low power consumption, synchronized operation and modern design for effective occupant notification.</p>
           <div class="eaton-grid">
             <article class="eaton-card">
-              <div class="eaton-card-img"><img src="assets/ekavis/snd-sbb.png" alt="EF-EN-SBB Sounder Base"></div>
+              <div class="eaton-card-img"><img src="<?= asset('assets/ekavis/snd-sbb.png') ?>" alt="EF-EN-SBB Sounder Base"></div>
               <span class="ekavis-model">EF-EN-SBB</span>
               <h4>Intelligent Addressable Sounder Base</h4>
               <p>Loop-powered sounder base for detector mounting with clear audible alarm notification.</p>
             </article>
             <article class="eaton-card">
-              <div class="eaton-card-img"><img src="assets/ekavis/snd-sb24v.png" alt="EF-EN-SB24V Sounder"></div>
+              <div class="eaton-card-img"><img src="<?= asset('assets/ekavis/snd-sb24v.png') ?>" alt="EF-EN-SB24V Sounder"></div>
               <span class="ekavis-model">EF-EN-SB24V</span>
               <h4>Addressable Sounder White Light</h4>
               <p>4-wired addressable sounder with white light — requires extra 24V supply.</p>
             </article>
             <article class="eaton-card">
-              <div class="eaton-card-img"><img src="assets/ekavis/snd-lps.png" alt="EF-EN-LPS Sounder Beacon"></div>
+              <div class="eaton-card-img"><img src="<?= asset('assets/ekavis/snd-lps.png') ?>" alt="EF-EN-LPS Sounder Beacon"></div>
               <span class="ekavis-model">EF-EN-LPS</span>
               <h4>Intelligent Addressable Loop Powered Sounder Beacon</h4>
               <p>Combined sounder and beacon on the loop — audible and visual alarm in one device.</p>
@@ -183,19 +134,19 @@
           <p class="ekavis-section-desc">From zone monitors to input/output modules, EKAVIS modules extend system flexibility with secure interfacing. Compact, loop-powered and EN54-compliant for third-party integration.</p>
           <div class="eaton-grid">
             <article class="eaton-card">
-              <div class="eaton-card-img"><img src="assets/ekavis/mod-lpcm.png" alt="EF-EN-LPCM Module"></div>
+              <div class="eaton-card-img"><img src="<?= asset('assets/ekavis/mod-lpcm.png') ?>" alt="EF-EN-LPCM Module"></div>
               <span class="ekavis-model">EF-EN-LPCM</span>
               <h4>Addressable Loop Power Input &amp; Output Module</h4>
               <p>Loop-powered I/O module for secure integration with third-party devices and simplified cabling.</p>
             </article>
             <article class="eaton-card">
-              <div class="eaton-card-img"><img src="assets/ekavis/mod-zmm.png" alt="EF-EN-ZMM Zone Module"></div>
+              <div class="eaton-card-img"><img src="<?= asset('assets/ekavis/mod-zmm.png') ?>" alt="EF-EN-ZMM Zone Module"></div>
               <span class="ekavis-model">EF-EN-ZMM</span>
               <h4>Addressable Zone Module</h4>
               <p>Monitors conventional zones and interfaces them into the addressable loop system.</p>
             </article>
             <article class="eaton-card">
-              <div class="eaton-card-img"><img src="assets/ekavis/mod-cm.png" alt="EF-EN-CM Output Module"></div>
+              <div class="eaton-card-img"><img src="<?= asset('assets/ekavis/mod-cm.png') ?>" alt="EF-EN-CM Output Module"></div>
               <span class="ekavis-model">EF-EN-CM</span>
               <h4>Addressable Output Module</h4>
               <p>Controls external devices and outputs with reliable EN54-compliant addressable operation.</p>
@@ -232,7 +183,7 @@
             <p class="ekavis-section-desc">EKAVIS conventional fire alarm control panels deliver dependable protection for small to medium-sized projects. From single-zone to multi-zone configurations, they offer easy installation, reliable performance and straightforward maintenance.</p>
             <div class="eaton-grid eaton-grid-1">
               <article class="eaton-card">
-                <div class="eaton-card-img"><img src="assets/ekavis/conventional/panel-16z.png" alt="EF-EN-16z Panel"></div>
+                <div class="eaton-card-img"><img src="<?= asset('assets/ekavis/conventional/panel-16z.png') ?>" alt="EF-EN-16z Panel"></div>
                 <span class="ekavis-model">EF-EN-16z</span>
                 <h4>Conventional Fire Alarm Control Panel</h4>
                 <p>Available in 2 / 4 / 8 / 12 / 16 zone configurations for flexible conventional systems.</p>
@@ -245,13 +196,13 @@
             <p class="ekavis-section-desc">Reliable and accurate fire sensing with clear LED indication. Smoke and heat variants with full compatibility across EKAVIS conventional panels.</p>
             <div class="eaton-grid eaton-grid-2">
               <article class="eaton-card">
-                <div class="eaton-card-img"><img src="assets/ekavis/conventional/det-csd.png" alt="EF-EN-CSD Smoke Detector"></div>
+                <div class="eaton-card-img"><img src="<?= asset('assets/ekavis/conventional/det-csd.png') ?>" alt="EF-EN-CSD Smoke Detector"></div>
                 <span class="ekavis-model">EF-EN-CSD</span>
                 <h4>Conventional Smoke Detector</h4>
                 <p>Optical smoke detector for early warning with stable sensing and clear LED indication.</p>
               </article>
               <article class="eaton-card">
-                <div class="eaton-card-img"><img src="assets/ekavis/conventional/det-chd.png" alt="EF-EN-CHD Heat Detector"></div>
+                <div class="eaton-card-img"><img src="<?= asset('assets/ekavis/conventional/det-chd.png') ?>" alt="EF-EN-CHD Heat Detector"></div>
                 <span class="ekavis-model">EF-EN-CHD</span>
                 <h4>Conventional Heat Detector</h4>
                 <p>Heat detector for environments where smoke detection is less suitable.</p>
@@ -263,7 +214,7 @@
             <h3 class="eaton-section-title"><i class="fa fa-hand-pointer"></i> Conventional Manual Call Points (MCPs)</h3>
             <p class="ekavis-section-desc">Reliable first-response activation with surface and flush-mount options, LED indication, fire-retardant housings and resettable operation.</p>
             <div class="eaton-mcp">
-              <div class="eaton-card-img"><img src="assets/ekavis/conventional/mcp-cmcp.png" alt="EF-EN-CMCP Call Point"></div>
+              <div class="eaton-card-img"><img src="<?= asset('assets/ekavis/conventional/mcp-cmcp.png') ?>" alt="EF-EN-CMCP Call Point"></div>
               <div>
                 <span class="ekavis-model">EF-EN-CMCP</span>
                 <h4>Conventional Manual Call Point</h4>
@@ -277,13 +228,13 @@
             <p class="ekavis-section-desc">Clear and powerful alarm signaling with efficient power usage, synchronized operation and durable construction for effective occupant notification.</p>
             <div class="eaton-grid eaton-grid-2">
               <article class="eaton-card">
-                <div class="eaton-card-img"><img src="assets/ekavis/conventional/snd-csb.png" alt="EF-EN-CSB Sounder Beacon"></div>
+                <div class="eaton-card-img"><img src="<?= asset('assets/ekavis/conventional/snd-csb.png') ?>" alt="EF-EN-CSB Sounder Beacon"></div>
                 <span class="ekavis-model">EF-EN-CSB</span>
                 <h4>Conventional Sounder Beacon</h4>
                 <p>Combined sounder and beacon for audible and visual alarm indication.</p>
               </article>
               <article class="eaton-card">
-                <div class="eaton-card-img"><img src="assets/ekavis/conventional/snd-sbb.png" alt="EF-EN-SBB Sounder Base"></div>
+                <div class="eaton-card-img"><img src="<?= asset('assets/ekavis/conventional/snd-sbb.png') ?>" alt="EF-EN-SBB Sounder Base"></div>
                 <span class="ekavis-model">EF-EN-SBB</span>
                 <h4>Conventional Sounder Beacon Base</h4>
                 <p>Sounder beacon base for detector mounting and clear alarm notification.</p>
@@ -296,7 +247,7 @@
             <p class="ekavis-section-desc">Enhances system visibility and supports quick identification of activated devices in critical or hard-to-access locations.</p>
             <div class="eaton-grid eaton-grid-1">
               <article class="eaton-card">
-                <div class="eaton-card-img"><img src="assets/ekavis/conventional/acc-ri.png" alt="EF-EN-RI Remote Indicator"></div>
+                <div class="eaton-card-img"><img src="<?= asset('assets/ekavis/conventional/acc-ri.png') ?>" alt="EF-EN-RI Remote Indicator"></div>
                 <span class="ekavis-model">EF-EN-RI</span>
                 <h4>Remote Indicator</h4>
                 <p>Remote LED indicator for clear status confirmation with EKAVIS conventional detectors.</p>
@@ -316,39 +267,9 @@
         </div>
 
         <div class="gas-page-actions">
-          <a class="btn-secondary" href="index.html#contact">Request a Quote</a>
-          <a class="btn-outline" href="index.html#catalog">Back to Products</a>
+          <a class="btn-secondary" href="<?= nav_link('#contact') ?>">Request a Quote</a>
+          <a class="btn-outline" href="<?= nav_link('#catalog') ?>">Back to Products</a>
         </div>
       </div>
     </section>
   </main>
-
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div class="footer-about">
-        <img src="assets/logo-light.svg" alt="BESA" class="logo-footer">
-        <p>BESA Life Safety Private Limited is committed to delivering innovative, reliable and high-quality Fire &amp; Life Safety solutions.</p>
-      </div>
-      <div class="footer-links">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="eaton-products.html">Eaton Products</a></li>
-          <li><a href="ekavis-products.html">Ekavis Products</a></li>
-          <li><a href="gas-detector.html">Gas Detector</a></li>
-        </ul>
-      </div>
-      <div class="footer-contact">
-        <h4>Contact Us</h4>
-        <p><i class="fa fa-phone"></i> +91 8956929705</p>
-        <p><i class="fa fa-envelope"></i> info@besasafety.com</p>
-      </div>
-    </div>
-    <div class="container footer-bottom">
-      <p>© 2026 BESA Life Safety Pvt. Ltd. All Rights Reserved.</p>
-    </div>
-  </footer>
-
-  <script src="js/script.js"></script>
-</body>
-</html>

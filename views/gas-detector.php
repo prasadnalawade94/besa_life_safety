@@ -1,53 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <script>
-    (function () {
-      if (/github\.io$/i.test(location.hostname)) {
-        var b = document.createElement('base');
-        b.href = '/besa_life_safety/';
-        document.head.appendChild(b);
-      }
-    })();
-  </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BESA Gas Detector — BA GLD | BESA Life Safety</title>
-  <meta name="description" content="BESA Gas Detector Module (BA GLD) — commercial-grade LPG/CNG/PNG leak detection with audible & visual alarms, relay output, and IS/RoHS compliant design.">
-  <link rel="icon" href="assets/favicon.svg">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css?v=20260718">
-</head>
-<body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <div class="contact"> <i class="fa fa-phone"></i> +91 8956929705 &nbsp; <i class="fa fa-envelope"></i> info@besasafety.com</div>
-      <div class="socials">Follow Us : <a href="#"><i class="fab fa-facebook-f"></i></a> <a href="#"><i class="fab fa-linkedin-in"></i></a> <a href="#"><i class="fab fa-instagram"></i></a></div>
-    </div>
-  </header>
-
-  <nav class="navbar">
-    <div class="container nav-inner">
-      <div class="brand">
-        <a href="index.html"><img src="assets/besa-logo.png" alt="BESA Logo" class="logo"></a>
-      </div>
-      <button id="mobileToggle" class="mobile-toggle" aria-label="Menu"><i class="fa fa-bars"></i></button>
-      <ul class="nav-links">
-        <li><a href="index.html#home">Home</a></li>
-        <li><a href="index.html#about">About Us</a></li>
-        <li class="has-sub"><a class="active" href="index.html#products">Products</a></li>
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="index.html#projects">Projects</a></li>
-        <li><a href="index.html#careers">Careers</a></li>
-        <li><a href="index.html#contact">Contact Us</a></li>
-      </ul>
-      <a class="btn-quote" href="index.html#contact">Get A Quote</a>
-    </div>
-  </nav>
-
-  <main>
-    <section class="gas-detector-page">
+<section class="gas-detector-page">
       <div class="container">
         <div class="page-header">
           <div class="page-headline">BESA Product</div>
@@ -108,7 +59,7 @@
 
           <aside class="gas-spec-aside">
             <figure class="gas-product-figure">
-              <img src="assets/gas-detector-product.png" alt="BESA Gas Detector Module">
+              <img src="<?= asset('assets/gas-detector-product.png') ?>" alt="BESA Gas Detector Module">
               <!-- <figcaption>[Fig: Gas Detector Module]</figcaption> -->
             </figure>
 
@@ -149,42 +100,9 @@
         </div>
 
         <div class="gas-page-actions">
-          <a class="btn-secondary" href="index.html#contact">Request a Quote</a>
-          <a class="btn-outline" href="index.html#catalog">Back to Products</a>
+          <a class="btn-secondary" href="<?= nav_link('#contact') ?>">Request a Quote</a>
+          <a class="btn-outline" href="<?= nav_link('#catalog') ?>">Back to Products</a>
         </div>
       </div>
     </section>
   </main>
-
-  <footer id="contact" class="footer">
-    <div class="container footer-grid">
-      <div class="footer-about">
-        <img src="assets/logo-light.svg" alt="BESA" class="logo-footer">
-        <p>BESA Life Safety Private Limited is committed to delivering innovative, reliable and high-quality Fire &amp; Life Safety solutions.</p>
-        <div class="socials footer-socials"><a href="#"><i class="fab fa-facebook-f"></i></a> <a href="#"><i class="fab fa-linkedin-in"></i></a> <a href="#"><i class="fab fa-instagram"></i></a></div>
-      </div>
-      <div class="footer-links">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#about">About Us</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="gas-detector.html">Gas Detector</a></li>
-        </ul>
-      </div>
-      <div class="footer-contact">
-        <h4>Contact Us</h4>
-        <p><i class="fa fa-phone"></i> +91 8956929705</p>
-        <p><i class="fa fa-envelope"></i> info@besasafety.com</p>
-        <p>1St Floor, Flat No 101, Seva Homes,Near Daffodil school, Balewadi Road, Balewadi, Pune, Maharashtra, 411045</p>
-      </div>
-    </div>
-    <div class="container footer-bottom">
-      <p>© 2026 BESA Life Safety Pvt. Ltd. All Rights Reserved.</p>
-      <div><a href="#">Privacy Policy</a> | <a href="#">Terms &amp; Conditions</a></div>
-    </div>
-  </footer>
-
-  <script src="js/script.js"></script>
-</body>
-</html>
