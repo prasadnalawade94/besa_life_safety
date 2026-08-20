@@ -8,24 +8,34 @@ $footer_id = $footer_id ?? '';
       <div class="footer-about">
         <!-- <img src="<?= asset('assets/logo-light.svg') ?>" alt="BESA" class="logo-footer"> -->
         <p>BESA Life Safety Private Limited is committed to delivering innovative, reliable and high-quality Fire &amp; Life Safety solutions.</p>
-        <div class="socials footer-socials">
+        <!-- <div class="socials footer-socials">
           <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
           <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        </div>
+        </div> -->
       </div>
       <div class="footer-links">
+        <span style="display: flex; align-items: center; gap: 10px;">
+          <i class="fa fa-link"></i>
         <h4>Quick Links</h4>
-        <ul>
-          <li><a href="<?= url('index.php') ?>">Home</a></li>
-          <li><a href="<?= nav_link('#about') ?>">About Us</a></li>
-          <li><a href="<?= nav_link('#services') ?>">Services</a></li>
-          <li><a href="<?= page_url('eaton-products') ?>">Eaton Products</a></li>
-          <li><a href="<?= page_url('ekavis-products') ?>">Ekavis Products</a></li>
-          <li><a href="<?= page_url('gas-detector') ?>">Gas Detector</a></li>
-          <li><a href="<?= nav_link('#projects') ?>">Projects</a></li>
-          <li><a href="<?= nav_link('#contact') ?>">Contact</a></li>
-        </ul>
+        </span>
+       <div style="display: flex; gap: 50px;">
+    
+    <ul>
+        <li><a href="<?= url('index.php') ?>">Home</a></li>
+        <li><a href="<?= nav_link('#about') ?>">About Us</a></li>
+        <li><a href="<?= nav_link('#services') ?>">Services</a></li>
+        <li><a href="<?= page_url('eaton-products') ?>">Eaton Products</a></li>
+    </ul>
+
+    <ul>
+        <li><a href="<?= page_url('ekavis-products') ?>">Ekavis Products</a></li>
+        <li><a href="<?= page_url('gas-detector') ?>">Gas Detector</a></li>
+        <li><a href="<?= nav_link('#projects') ?>">Projects</a></li>
+        <li><a href="<?= nav_link('#contact') ?>">Contact</a></li>
+    </ul>
+
+</div>
       </div>
       <div class="footer-contact">
         <h4>Contact Us</h4>
@@ -40,6 +50,6 @@ $footer_id = $footer_id ?? '';
     </div>
   </footer>
 
-  <script src="<?= asset('js/script.js') ?>"></script>
+  <script src="<?= asset('js/script.js') ?>?v=<?= CSS_VERSION ?>"></script>
 </body>
 </html>

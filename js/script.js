@@ -1,6 +1,10 @@
 // Hero Slider
 const slides = document.querySelectorAll('.hero .slide');
 const indicators = document.querySelector('.hero-indicators');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Quote form modal
+
 
 if (slides.length && indicators) {
   let current = 0;
@@ -122,3 +126,93 @@ document.querySelectorAll('.product-tabs').forEach(tabList => {
     });
   });
 });
+
+// Sticky navbar shadow
+const navbar = document.querySelector('.navbar');
+if (navbar) {
+  const onScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 12);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+}
+
+// Scroll-in animations
+const revealSelectors = [
+  '.section-title',
+  '.page-header',
+  '.about-copy',
+  '.about-stat-card',
+  '.service-card',
+  '.supplier-card',
+  '.service-highlight',
+  '.project-card',
+  '.eaton-card',
+  '.eaton-section',
+  '.eaton-highlight',
+  '.ekavis-feature',
+  '.ekavis-intro',
+  '.gas-spec-sheet',
+  '.eaton-brand-bar',
+  '.eaton-mcp'
+];
+
+if (!reduceMotion) {
+  const targets = document.querySelectorAll(revealSelectors.join(','));
+  const groups = new Map();
+
+  targets.forEach(el => {
+    el.classList.add('reveal');
+    const parent = el.parentElement;
+    if (!groups.has(parent)) groups.set(parent, []);
+    groups.get(parent).push(el);
+  });
+
+  groups.forEach(items => {
+    items.forEach((el, i) => {
+      el.style.transitionDelay = `${Math.min(i * 70, 420)}ms`;
+    });
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('in-view');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  targets.forEach(el => observer.observe(el));
+}
+
+// Count-up stats
+function animateCount(el) {
+  const raw = el.textContent.trim();
+  const match = raw.match(/^(\d+)(.*)$/);
+  if (!match) return;
+  const end = parseInt(match[1], 10);
+  const suffix = match[2];
+  const duration = 1200;
+  const start = performance.now();
+
+  function tick(now) {
+    const t = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - t, 3);
+    el.textContent = Math.round(end * eased) + suffix;
+    if (t < 1) requestAnimationFrame(tick);
+  }
+
+  requestAnimationFrame(tick);
+}
+
+if (!reduceMotion) {
+  const stats = document.querySelectorAll('.about-stat-card strong');
+  if (stats.length) {
+    const statObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        animateCount(entry.target);
+        statObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.4 });
+    stats.forEach(el => statObserver.observe(el));
+  }
+}

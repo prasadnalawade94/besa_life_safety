@@ -1,27 +1,27 @@
 <!-- Hero Slider -->
     <section id="home" class="hero">
       <div class="hero-slider">
-        <div class="slide active" style="background-image: url('<?= asset('assets/Home/1.png') ?>')">
+        <div class="slide active" style="background-image: url('<?= asset('assets/Home/2.png') ?>')">
           <div class="hero-content container">
             <h1>Protecting Lives with Trusted <strong>Fire & Life Safety</strong> Solutions</h1>
             <p>BESA LIFE SAFETY PRIVATE LIMITED — Pune-based specialists in Fire Detection, Fire Fighting, Gas Leak Detection, Public Address (PA) and Life Safety systems. We provide reliable products and end-to-end services to protect people, property and business continuity.</p>
-            <a class="btn-primary" href="#services">Explore Our Solutions</a>
+            <!-- <a class="btn-primary" href="#services">Explore Our Solutions</a> -->
           </div>
         </div>
-         <div class="slide" style="background-image: url('<?= asset('assets/smoke_hd.jpg') ?>')">
+         <div class="slide" style="background-image: url('<?= asset('assets/Home/3.png') ?>')">
           <div class="hero-content container">
-            <h1>Industrial Grade <strong>Fire Safety</strong></h1>
+            <!-- <h1>Industrial Grade <strong>Fire Safety</strong></h1>
             <p>Trusted systems for factories, warehouses, and commercial buildings.</p>
-            <a class="btn-primary" href="#projects">View Projects</a>
+            <a class="btn-primary" href="#projects">View Projects</a> -->
           </div>
         </div>
       
         
-    <div class="slide" style="background-image: url('<?= asset('assets/ekavis_cover.png') ?>')">
+    <div class="slide" style="background-image: url('<?= asset('assets/Home/1.png') ?>')">
           <div class="hero-content container">
-            <h1>Industrial Grade <strong>Fire Safety</strong></h1>
+            <!-- <h1>Industrial Grade <strong>Fire Safety</strong></h1>
             <p>Trusted systems for factories, warehouses, and commercial buildings.</p>
-            <a class="btn-primary" href="#projects">View Projects</a>
+            <a class="btn-primary" href="#projects">View Projects</a> -->
           </div>
         </div>
       </div>
@@ -286,13 +286,14 @@
         </div>
         <div class="supplier-card product-card">
           <a href="#">
+                 <div style="display: flex; gap: 15px;">
+    
+             <img class="talk_back"  src="<?= asset('assets/Products/talk_back_panel.png') ?>" alt="EATON Cooper">
             <img src="<?= asset('assets/Products/talk_back.png') ?>" alt="EATON Cooper">
+</div>
             <h4>Talk Back System </h4>
-            <p>BESA Talk Back System is a reliable emergency communication solution for fire & life safety applications.
-Enables quick communication between the Control Panel and Talk Back Boxes across multiple zones.
-Features MIC-based communication for sending emergency messages and receiving responses.
-Supports up to 24 zones with simple controls for Silent, Reset, Test and All Call functions.
-Designed for easy operation, quick response and reliable performance in residential, commercial and industrial premises
+            <p>BESA Talk Back System is a reliable emergency communication solution for fire and life safety applications, enabling clear two-way communication between the control panel and up to 24 zones. It features digital microphone technology, simple controls, DIP-switch addressing, and cost-effective 2-core cabling. The Ground Floor functionality is integrated into the main control panel, with optional SIM-based emergency calls and SMS alerts. Suitable for residential, commercial, and industrial premises.
+
 </p>
           </a>
         </div>
@@ -313,7 +314,7 @@ Designed for easy operation, quick response and reliable performance in resident
           <div class="project-card"><img src="<?= asset('assets/Clients/shapurji_manjri.jpg') ?>" alt="IT Park Pune"><h4>Shapoorji Pallonji Joyville <br/> Manjari Pune</h4></div>
           <div class="project-card"><img src="<?= asset('assets/Clients/jehangir_hospital.png') ?>" alt="Jehangir Hospital"><h4>Jehangir Hospital <br/>Pune</h4></div>
           <div class="project-card"><img src="<?= asset('assets/Clients/Valmet.png') ?>" alt="Valmet Technologies and Services Pvt. Ltd"><h4>Valmet Pvt. Ltd <br/> Pune</h4></div>
-          <div class="project-card"><img src="<?= asset('assets/Clients/thermax.png') ?>" alt="Thermax Limited"><h4>Thermax  Pvt Ltd <br/> Pimpri-Chinchwad</h4></div>
+          <div class="project-card"><img src="<?= asset('assets/Clients/Thermax.png') ?>" alt="Thermax Limited"><h4>Thermax  Pvt Ltd <br/> Pimpri-Chinchwad</h4></div>
             <div class="project-card"><img src="<?= asset('assets/Clients/jehangir_hospital.png') ?>" alt="Jehangir Hospital"><h4>Jehangir Hospital <br/>Pune</h4></div>
           <div class="project-card"><img src="<?= asset('assets/Clients/shapurji_manjri.jpg') ?>" alt="IT Park Pune"><h4>Shapoorji Pallonji Joyville <br/> Manjari Pune</h4></div>
         </div>

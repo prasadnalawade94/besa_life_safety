@@ -15,12 +15,15 @@ function nav_active(string $item, string $current): string
     return $item === $current ? ' class="active"' : '';
 }
 
+
+
 /** Render a page view with optional metadata overrides */
 function render_page(string $view, array $overrides = []): void
 {
     $pages = require __DIR__ . '/pages.php';
     $meta = array_merge($pages[$view] ?? [], $overrides);
     $meta['view'] = $view;
+
 
     $viewFile = __DIR__ . '/../views/' . $view . '.php';
     if (!is_file($viewFile)) {

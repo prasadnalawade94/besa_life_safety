@@ -13,4 +13,6 @@ require __DIR__ . '/header.php';
   <main>
 <?php require $viewFile; ?>
   </main>
+
+  </div>
 <?php require __DIR__ . '/footer.php'; ?>
