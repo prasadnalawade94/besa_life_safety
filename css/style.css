@@ -16,6 +16,9 @@ body{
   min-width:0;
 }
 img,video,svg{max-width:100%;height:auto;display:block}
+.container,main,section,article,div{min-width:0}
+button,input,textarea,select{max-width:100%}
+iframe{max-width:100%;border:0}
 .container{max-width:var(--max-width);margin:0 auto;padding:0 20px;width:100%}
 
 /* Topbar */
@@ -445,6 +448,23 @@ a:focus,button:focus{outline:3px solid rgba(230,57,70,0.16);outline-offset:2px}
   .eaton-brand-bar{flex-direction:column;gap:8px}
   .eaton-section-title{font-size:13px;padding:12px 14px}
 
+  .ekavis-story-section,
+  .ekavis-story-section > .story-content > div,
+  .ekavis-values-section > div,
+  .ekavis-innovations-section > div,
+  .ekavis-advantages-section > div,
+  .ekavis-security-section > div{grid-template-columns:1fr !important}
+  .ekavis-story-section{padding:24px 16px !important}
+  .ekavis-innovations-section,
+  .ekavis-security-section{padding:20px 16px !important}
+  .ekavis-advantages-section .advantage-card{padding:16px !important}
+  .ekavis-page .eaton-card{padding:16px 12px}
+  .ekavis-page .eaton-card p,
+  .ekavis-page .ekavis-section-desc{overflow-wrap:anywhere}
+  .footer-links > div[style]{display:grid !important;grid-template-columns:1fr 1fr;gap:18px !important}
+  .footer-links ul{min-width:0}
+  .footer-links a{overflow-wrap:anywhere}
+
   .gas-spec-sheet{padding:18px 16px;border-radius:14px}
   .spec-list li{font-size:13px}
 }
@@ -465,11 +485,16 @@ a:focus,button:focus{outline:3px solid rgba(230,57,70,0.16);outline-offset:2px}
   .services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .eaton-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
   .eaton-grid-5{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .talk-back-display{display: flex; gap: 15px;}
 }
 
+@media(min-width:768px){
+  .talk-back-display{display: flex; gap: 15px;}
+}
 /* Large desktop */
 @media(min-width:1400px){
   :root{--max-width:1280px}
+
 }
 
 /* Product range tabs (Addressable / Conventional) */
@@ -612,3 +637,4 @@ a:focus,button:focus{outline:3px solid rgba(230,57,70,0.16);outline-offset:2px}
   .slide,.slide.active{opacity:1;visibility:visible;transform:none}
   .reveal{opacity:1;transform:none}
 }
+

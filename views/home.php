@@ -286,7 +286,7 @@
         </div>
         <div class="supplier-card product-card">
           <a href="#">
-                 <div style="display: flex; gap: 15px;">
+                 <div class="talk-back-display">
     
              <img class="talk_back"  src="<?= asset('assets/Products/talk_back_panel.png') ?>" alt="EATON Cooper">
             <img src="<?= asset('assets/Products/talk_back.png') ?>" alt="EATON Cooper">
@@ -315,8 +315,8 @@
           <div class="project-card"><img src="<?= asset('assets/Clients/jehangir_hospital.png') ?>" alt="Jehangir Hospital"><h4>Jehangir Hospital <br/>Pune</h4></div>
           <div class="project-card"><img src="<?= asset('assets/Clients/Valmet.png') ?>" alt="Valmet Technologies and Services Pvt. Ltd"><h4>Valmet Pvt. Ltd <br/> Pune</h4></div>
           <div class="project-card"><img src="<?= asset('assets/Clients/Thermax.png') ?>" alt="Thermax Limited"><h4>Thermax  Pvt Ltd <br/> Pimpri-Chinchwad</h4></div>
-            <div class="project-card"><img src="<?= asset('assets/Clients/jehangir_hospital.png') ?>" alt="Jehangir Hospital"><h4>Jehangir Hospital <br/>Pune</h4></div>
-          <div class="project-card"><img src="<?= asset('assets/Clients/shapurji_manjri.jpg') ?>" alt="IT Park Pune"><h4>Shapoorji Pallonji Joyville <br/> Manjari Pune</h4></div>
+            <div class="project-card"><img src="<?= asset('assets/Clients/Parakh_foods.png') ?>" alt="Jehangir Hospital"><h4>Parakh Foods & Oils Ltd Kurkumbh  <br/>Daund, Pune</h4></div>
+          <div class="project-card"><img src="<?= asset('assets/Clients/pune_international_airport.png') ?>" alt="Pune International Airport"><h4>Pune International Airport <br/> Logegaon, Pune</h4></div>
         </div>
         <button class="carousel-next" data-target="projects" aria-label="Next project">›</button>
       </div>
