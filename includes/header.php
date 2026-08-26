@@ -33,6 +33,6 @@ $active_nav = $active_nav ?? '';
         </li>
 <?php endforeach; ?>
       </ul>
-      <!-- <a class="btn-quote" href="#quote-modal" data-quote-open>Get A Quote</a> -->
+      <a class="btn-quote" href="#quote-modal" data-quote-open>Get A Quote</a>
     </div>
   </nav>

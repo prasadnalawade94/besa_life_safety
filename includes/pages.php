@@ -11,8 +11,8 @@ return [
         'footer_id' => 'contact',
     ],
     'eaton-products' => [
-        'title' => 'Eaton Cooper CH Fire Alarm System — Addressable | BESA Life Safety',
-        'description' => 'Authorized Eaton Cooper CH addressable fire alarm products — sounders, beacons, control panels, detectors, interfaces and manual call points from BESA Life Safety.',
+        'title' => 'Eaton Cooper CH Fire Alarm Systems — Addressable & Conventional | BESA Life Safety',
+        'description' => 'Authorized Eaton Cooper CH addressable and conventional fire alarm products — panels, detectors, sounders, beacons, interfaces and manual call points from BESA Life Safety.',
         'active_nav' => 'products',
     ],
     'ekavis-products' => [

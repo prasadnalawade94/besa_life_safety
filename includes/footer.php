@@ -50,6 +50,35 @@ $footer_id = $footer_id ?? '';
     </div>
   </footer>
 
+  <div id="quote-modal" class="quote-modal" role="dialog" aria-modal="true" aria-labelledby="quote-title" aria-hidden="true">
+    <div class="quote-dialog">
+      <button type="button" class="quote-close" data-quote-close aria-label="Close quote form">&times;</button>
+      <h2 id="quote-title">Get A Quote</h2>
+      <p>Tell us about your fire and life safety requirement.</p>
+<?php if (($quote_status ?? '') !== ''): ?>
+      <p class="quote-status"><?= e($quote_status) ?></p>
+<?php endif; ?>
+      <form class="quote-form" method="post">
+        <input type="hidden" name="quote_request" value="1">
+        <div class="quote-field-row">
+          <label>Name
+            <input type="text" name="name" required>
+          </label>
+          <label>Phone
+            <input type="tel" name="phone" required>
+          </label>
+        </div>
+        <label>Email
+          <input type="email" name="email" required>
+        </label>
+        <label>Requirement
+          <textarea name="requirement" required></textarea>
+        </label>
+        <button class="btn-primary" type="submit">Submit Enquiry</button>
+      </form>
+    </div>
+  </div>
+
   <script src="<?= asset('js/script.js') ?>?v=<?= CSS_VERSION ?>"></script>
 </body>
 </html>

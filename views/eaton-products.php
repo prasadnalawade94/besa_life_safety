@@ -11,12 +11,12 @@
           <span>Cooper CH Fire Alarm System</span>
         </div>
 
-        <div class="product-tabs" role="tablist" aria-label="Eaton product ranges">
-          <button type="button" class="product-tab active" role="tab" aria-selected="true" data-tab="addressable">Addressable</button>
-          <button type="button" class="product-tab" role="tab" aria-selected="false" data-tab="conventional">Conventional</button>
+        <div class="product-tabs" role="tablist" aria-label="Eaton product systems">
+          <button type="button" class="product-tab active" id="eaton-addressable-tab" role="tab" aria-selected="true" aria-controls="tab-addressable" data-tab="addressable">Addressable System</button>
+          <button type="button" class="product-tab" id="eaton-conventional-tab" role="tab" aria-selected="false" aria-controls="tab-conventional" data-tab="conventional">Conventional System</button>
         </div>
 
-        <div class="product-tab-panel active" id="tab-addressable" role="tabpanel">
+        <div class="product-tab-panel active" id="tab-addressable" role="tabpanel" aria-labelledby="eaton-addressable-tab">
         <!-- Alarms – Beacons -->
         <div class="eaton-section">
           <h3 class="eaton-section-title"><i class="fa fa-bell"></i> Alarms – Beacons</h3>
@@ -196,7 +196,7 @@
         </div>
         </div><!-- /tab-addressable -->
 
-        <div class="product-tab-panel" id="tab-conventional" role="tabpanel" hidden>
+        <div class="product-tab-panel" id="tab-conventional" role="tabpanel" aria-labelledby="eaton-conventional-tab" hidden>
           <div class="eaton-brand-bar">
             <span>Complete Range of Conventional Fire Alarm System Devices</span>
           </div>
@@ -210,126 +210,147 @@
                 <span class="eaton-num">01</span>
                 <h4>Compact Door Retainer</h4>
                 <p>Compact door retainer for conventional fire systems.</p>
+                <span class="eaton-card-meta">Door release accessory</span>
               </article>
               <article class="eaton-card">
                 <div class="eaton-card-img"><img src="<?= asset('assets/eaton/conventional/02-power-supply.png') ?>" alt="Compact safety power supply"></div>
                 <span class="eaton-num">02</span>
                 <h4>Compact Safety Power Supply (SPS)</h4>
                 <p>Compact safety power supply for fire alarm systems.</p>
+                <span class="eaton-card-meta">System power accessory</span>
               </article>
               <article class="eaton-card">
                 <div class="eaton-card-img"><img src="<?= asset('assets/eaton/conventional/03-wall-sounder.png') ?>" alt="Compact wall sounder"></div>
                 <span class="eaton-num">03</span>
                 <h4>Compact Wall Sounder</h4>
                 <p>Compact wall sounder for conventional fire systems.</p>
+                <span class="eaton-card-meta">Audible alarm notification</span>
               </article>
               <article class="eaton-card">
                 <div class="eaton-card-img"><img src="<?= asset('assets/eaton/conventional/04-flexi-panel.png') ?>" alt="BiWire Flexi panel"></div>
                 <span class="eaton-num">04</span>
                 <h4>Conventional / BiWire Flexi Panel</h4>
                 <p>Conventional / BiWire Flexi fire alarm control panel.</p>
+                <span class="eaton-card-meta">Zone-based control</span>
               </article>
               <article class="eaton-card">
                 <div class="eaton-card-img"><img src="<?= asset('assets/eaton/conventional/05-beam-detector.png') ?>" alt="Reflective beam detector"></div>
                 <span class="eaton-num">05</span>
                 <h4>EN &amp; UL Reflective Beam Detector</h4>
                 <p>Conventional EN &amp; UL reflective beam detector.</p>
+                <span class="eaton-card-meta">Open-area detection</span>
               </article>
               <article class="eaton-card">
                 <div class="eaton-card-img"><img src="<?= asset('assets/eaton/conventional/06-call-points.png') ?>" alt="CXM CXL call points"></div>
                 <span class="eaton-num">06</span>
                 <h4>CXM &amp; CXL Manual Call Points</h4>
                 <p>Manual call points for fire, gas &amp; door release.</p>
+                <span class="eaton-card-meta">Manual alarm activation</span>
               </article>
               <article class="eaton-card">
                 <div class="eaton-card-img"><img src="<?= asset('assets/eaton/conventional/07-detectors.png') ?>" alt="Detector range"></div>
                 <span class="eaton-num">07</span>
                 <h4>Detector Range</h4>
                 <p>Detector range for conventional fire systems.</p>
+                <span class="eaton-card-meta">Smoke and heat detection</span>
               </article>
               <article class="eaton-card">
                 <div class="eaton-card-img"><img src="<?= asset('assets/eaton/conventional/08-hd-door-retainer.png') ?>" alt="Heavy duty door retainer"></div>
                 <span class="eaton-num">08</span>
                 <h4>Heavy Duty Door Retainer</h4>
                 <p>Heavy duty door retainer for conventional fire systems.</p>
+                <span class="eaton-card-meta">Heavy-duty door release</span>
               </article>
               <article class="eaton-card">
                 <div class="eaton-card-img"><img src="<?= asset('assets/eaton/conventional/09-relay-unit.png') ?>" alt="Heavy duty relay unit"></div>
                 <span class="eaton-num">09</span>
                 <h4>Heavy Duty Relay Unit</h4>
                 <p>Heavy duty relay unit for conventional fire systems.</p>
+                <span class="eaton-card-meta">External equipment interface</span>
               </article>
               <article class="eaton-card">
                 <div class="eaton-card-img"><img src="<?= asset('assets/eaton/conventional/10-high-output-sounder.png') ?>" alt="High output sounder"></div>
                 <span class="eaton-num">10</span>
                 <h4>High Output Sounder</h4>
                 <p>High output sounder for conventional fire systems.</p>
+                <span class="eaton-card-meta">High-output alarm</span>
               </article>
               <article class="eaton-card">
                 <div class="eaton-card-img"><img src="<?= asset('assets/eaton/conventional/11-led-beacon.png') ?>" alt="LED Beacon"></div>
                 <span class="eaton-num">11</span>
                 <h4>LED Beacon</h4>
                 <p>LED Beacon for conventional fire systems.</p>
+                <span class="eaton-card-meta">Visual alarm indication</span>
               </article>
               <article class="eaton-card">
                 <div class="eaton-card-img"><img src="<?= asset('assets/eaton/conventional/12-low-current-sounder.png') ?>" alt="Low current sounder"></div>
                 <span class="eaton-num">12</span>
                 <h4>Low Current Sounder</h4>
                 <p>Low current sounder for conventional fire systems.</p>
+                <span class="eaton-card-meta">Low-current audible alarm</span>
               </article>
               <article class="eaton-card">
                 <div class="eaton-card-img"><img src="<?= asset('assets/eaton/conventional/13-motorised-bell.png') ?>" alt="Motorised bell"></div>
                 <span class="eaton-num">13</span>
                 <h4>Motorised Bells</h4>
                 <p>Motorised bells for conventional fire systems.</p>
+                <span class="eaton-card-meta">Audible alarm notification</span>
               </article>
               <article class="eaton-card">
                 <div class="eaton-card-img"><img src="<?= asset('assets/eaton/conventional/14-optical-beam.png') ?>" alt="Optical smoke beam detector"></div>
                 <span class="eaton-num">14</span>
                 <h4>Optical Smoke Beam Detector</h4>
                 <p>Optical smoke beam detector for conventional fire systems.</p>
+                <span class="eaton-card-meta">Long-range smoke detection</span>
               </article>
               <article class="eaton-card">
                 <div class="eaton-card-img"><img src="<?= asset('assets/eaton/conventional/15-repeater-panel.png') ?>" alt="Passive repeater panel"></div>
                 <span class="eaton-num">15</span>
                 <h4>Passive Repeater Panel</h4>
                 <p>Passive repeater panel for BiWire &amp; conventional systems.</p>
+                <span class="eaton-card-meta">Remote alarm indication</span>
               </article>
               <article class="eaton-card">
                 <div class="eaton-card-img"><img src="<?= asset('assets/eaton/conventional/16-remote-indicator.png') ?>" alt="Remote indicator"></div>
                 <span class="eaton-num">16</span>
                 <h4>Remote Indicator</h4>
                 <p>Remote indicator for conventional fire systems.</p>
+                <span class="eaton-card-meta">Remote detector status</span>
               </article>
               <article class="eaton-card">
                 <div class="eaton-card-img"><img src="<?= asset('assets/eaton/conventional/17-sounder-base.png') ?>" alt="Sounder detector base"></div>
                 <span class="eaton-num">17</span>
                 <h4>Sounder Detector Base</h4>
                 <p>Sounder detector base for conventional fire systems.</p>
+                <span class="eaton-card-meta">Detector and sounder base</span>
               </article>
               <article class="eaton-card">
                 <div class="eaton-card-img"><img src="<?= asset('assets/eaton/conventional/18-sounder-vad.png') ?>" alt="Sounder visual alarm device"></div>
                 <span class="eaton-num">18</span>
                 <h4>Sounder Visual Alarm Device</h4>
                 <p>Sounder visual alarm device for conventional fire systems.</p>
+                <span class="eaton-card-meta">Audible and visual alarm</span>
               </article>
               <article class="eaton-card">
                 <div class="eaton-card-img"><img src="<?= asset('assets/eaton/conventional/19-ultralow-sounder.png') ?>" alt="Ultra-low current sounder"></div>
                 <span class="eaton-num">19</span>
                 <h4>Ultra-Low Current Sounder</h4>
                 <p>Ultra-low current sounder for conventional fire systems.</p>
+                <span class="eaton-card-meta">Ultra-low-current alarm</span>
               </article>
               <article class="eaton-card">
                 <div class="eaton-card-img"><img src="<?= asset('assets/eaton/conventional/20-visual-alarm.png') ?>" alt="Visual alarm device"></div>
                 <span class="eaton-num">20</span>
                 <h4>Visual Alarm Device</h4>
                 <p>Visual alarm device for conventional fire systems.</p>
+                <span class="eaton-card-meta">Visual alarm indication</span>
               </article>
               <article class="eaton-card">
                 <div class="eaton-card-img"><img src="<?= asset('assets/eaton/conventional/21-xenon-beacon.png') ?>" alt="Xenon sounder beacon"></div>
                 <span class="eaton-num">21</span>
                 <h4>Xenon Sounder Beacon</h4>
                 <p>Xenon sounder beacon for conventional fire systems.</p>
+                <span class="eaton-card-meta">Audible and visual alarm</span>
               </article>
             </div>
           </div>

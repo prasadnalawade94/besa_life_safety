@@ -306,6 +306,8 @@ a:focus,button:focus{outline:3px solid rgba(230,57,70,0.16);outline-offset:2px}
 .eaton-card-img img{max-height:100px;max-width:100%;width:auto;height:auto;object-fit:contain}
 .eaton-card h4{margin:0;font-size:14px;line-height:1.35;color:#111;font-family:Montserrat,sans-serif}
 .eaton-card p{margin:0;font-size:13px;line-height:1.55;color:#4b5563}
+.eaton-card-meta{margin-top:auto;padding-top:8px;border-top:1px solid #e5e7eb;color:var(--eaton-blue);font-size:11px;font-weight:700;line-height:1.35;text-transform:uppercase;letter-spacing:.04em}
+.eaton-num{color:var(--eaton-blue);font:700 11px/1 Montserrat,sans-serif;letter-spacing:.08em}
 .eaton-mcp{
   display:grid;grid-template-columns:minmax(140px,180px) 1fr;gap:24px;align-items:center;
   background:#fff;border-radius:14px;padding:clamp(16px,3vw,24px);

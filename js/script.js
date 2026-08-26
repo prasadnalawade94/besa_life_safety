@@ -4,6 +4,34 @@ const indicators = document.querySelector('.hero-indicators');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // Quote form modal
+const quoteModal = document.getElementById('quote-modal');
+const quoteOpeners = document.querySelectorAll('[data-quote-open]');
+const quoteCloser = quoteModal?.querySelector('[data-quote-close]');
+
+function closeQuoteModal() {
+  if (!quoteModal) return;
+  quoteModal.classList.remove('is-open');
+  quoteModal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+function openQuoteModal(event) {
+  event.preventDefault();
+  if (!quoteModal) return;
+  quoteModal.classList.add('is-open');
+  quoteModal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  quoteCloser?.focus();
+}
+
+quoteOpeners.forEach(opener => opener.addEventListener('click', openQuoteModal));
+quoteCloser?.addEventListener('click', closeQuoteModal);
+quoteModal?.addEventListener('click', event => {
+  if (event.target === quoteModal) closeQuoteModal();
+});
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') closeQuoteModal();
+});
 
 
 if (slides.length && indicators) {
