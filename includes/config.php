@@ -15,6 +15,7 @@ define('SITE_NAME', 'BESA Life Safety');
 define('SITE_TAGLINE', 'Protecting Lives, Securing Spaces');
 define('SITE_PHONE', '+91 8956929705');
 define('SITE_EMAIL', 'info@besasafety.com');
+define('ENQUIRY_EMAIL', 'enquiry@besasafety.com');
 define('SITE_ADDRESS', '1St Floor, Flat No 101, Seva Homes,Near Daffodil school, Balewadi Road, Balewadi, Pune, Maharashtra, 411045');
 define('CSS_VERSION', '20260814');
 
