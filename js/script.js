@@ -169,9 +169,11 @@ const revealSelectors = [
   '.page-header',
   '.about-copy',
   '.about-stat-card',
+  '.about-actions',
   '.service-card',
   '.supplier-card',
   '.service-highlight',
+  '.product-item',
   '.project-card',
   '.eaton-card',
   '.eaton-section',
@@ -179,8 +181,12 @@ const revealSelectors = [
   '.ekavis-feature',
   '.ekavis-intro',
   '.gas-spec-sheet',
+  '.gas-spec-block',
+  '.gas-doc-meta',
   '.eaton-brand-bar',
-  '.eaton-mcp'
+  '.eaton-mcp',
+  '.product-tab-panel',
+  '.quote-dialog'
 ];
 
 if (!reduceMotion) {

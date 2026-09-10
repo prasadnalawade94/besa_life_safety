@@ -9,12 +9,12 @@ $active_nav = $active_nav ?? '';
         <i class="fa fa-phone"></i> <?= SITE_PHONE ?> &nbsp;
         <i class="fa fa-envelope"></i> <?= SITE_EMAIL ?>
       </div>
-      <div class="socials">
+      <!-- <div class="socials">
         Follow Us :
         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
         <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      </div>
+      </div> -->
     </div>
   </header>
 
