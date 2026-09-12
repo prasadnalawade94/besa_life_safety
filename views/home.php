@@ -4,7 +4,8 @@
         <div class="slide active" style="background-image: url('<?= asset('assets/Home/2.png') ?>')">
           <div class="hero-content container">
             <h1>Protecting Lives with Trusted <strong>Fire & Life Safety</strong> Solutions</h1>
-            <p>BESA LIFE SAFETY PRIVATE LIMITED — Pune-based specialists in Fire Detection, Fire Fighting, Gas Leak Detection, Public Address (PA) and Life Safety systems. We provide reliable products and end-to-end services to protect people, property and business continuity.</p>
+            <p>BESA LIFE SAFETY PRIVATE LIMITED — We are specialists in **Fire Detection, Fire Fighting, Gas Leak Detection, Public Address (PA) and Life Safety Systems**, delivering reliable products and end-to-end solutions across **India**. Our services include **Design, Supply, Installation, Testing & Commissioning, and Annual Maintenance Services (AMC)** for industrial, commercial and residential projects, helping protect people, property and business continuity.
+</p>
             <!-- <a class="btn-primary" href="#services">Explore Our Solutions</a> -->
           </div>
         </div>

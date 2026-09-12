@@ -42,7 +42,7 @@ const NAV_DROPDOWNS = [
         ['label' => 'Talk Back System', 'href' => 'talk-back-system'],
     ],
     'authorized-suppliers' => [
-        ['label' => 'Eaton Cooper CH', 'href' => 'eaton-products'],
+        ['label' => 'Eaton Cooper', 'href' => 'eaton-products'],
         ['label' => 'Ekavis', 'href' => 'ekavis-products'],
     ],
 ];

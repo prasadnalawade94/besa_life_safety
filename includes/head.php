@@ -57,6 +57,7 @@ if (isset($service['title'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?= e($page_title) ?></title>
   <meta name="description" content="<?= e($page_description) ?>">
+  <meta name="google-site-verification" content="P2hoKTWWq6oQcC6CKa2XxoQIr2_mgalaaNxLWE8gSrU">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="<?= e($canonical) ?>">
   <meta property="og:type" content="website">

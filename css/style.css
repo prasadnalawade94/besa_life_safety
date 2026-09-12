@@ -426,6 +426,11 @@ a:focus,button:focus{outline:3px solid rgba(230,57,70,0.16);outline-offset:2px}
 }
 .eaton-brand-bar img{height:36px;width:auto}
 .eaton-brand-bar span{font-family:Montserrat,sans-serif;font-weight:700;color:var(--eaton-blue);letter-spacing:0.02em;text-align:center}
+.eaton-seo-intro{margin:0 0 28px;padding:24px;background:linear-gradient(135deg,#eff6ff,#fff);border:1px solid #bfdbfe;border-left:4px solid var(--eaton-blue);border-radius:12px}
+.eaton-seo-intro h3{margin:0 0 9px;font-family:Montserrat,sans-serif;color:var(--eaton-blue);font-size:20px}
+.eaton-seo-intro p{margin:0;color:#374151;line-height:1.7;font-size:14px}
+.eaton-seo-services{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.eaton-seo-services span{padding:8px 10px;background:#fff;border:1px solid #dbeafe;border-radius:5px;color:#1e3a8a;font-size:12px;font-weight:600}
 .eaton-section{margin-bottom:32px}
 .eaton-section-title{
   display:flex;align-items:center;gap:12px;flex-wrap:wrap;
