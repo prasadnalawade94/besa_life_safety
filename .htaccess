@@ -9,6 +9,19 @@ DirectoryIndex index.php index.html
   RewriteEngine On
   RewriteBase /
 
+  # Block direct requests to private application and repository paths.
+  RewriteRule ^(?:includes|\.git|\.vscode)(?:/|$) - [F,L]
+
+  # Preserve old Pune URLs while moving the public URL structure to India-wide slugs.
+  RewriteRule ^pa-system-pune(?:\.php)?/?$ pa-system [R=301,L]
+  RewriteRule ^fire-alarm-system-pune(?:\.php)?/?$ fire-alarm-system [R=301,L]
+  RewriteRule ^fire-fighting-system-pune(?:\.php)?/?$ fire-fighting-system [R=301,L]
+  RewriteRule ^fire-hydrant-system-pune(?:\.php)?/?$ fire-hydrant-system [R=301,L]
+  RewriteRule ^fire-sprinkler-system-pune(?:\.php)?/?$ fire-sprinkler-system [R=301,L]
+  RewriteRule ^fire-alarm-amc-pune(?:\.php)?/?$ fire-alarm-amc [R=301,L]
+  RewriteRule ^fire-safety-audit-pune(?:\.php)?/?$ fire-safety-audit [R=301,L]
+  RewriteRule ^projects-pune(?:\.php)?/?$ projects [R=301,L]
+
   # Skip if file/dir exists (assets, css, js)
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
@@ -16,6 +29,24 @@ DirectoryIndex index.php index.html
 
   # Redirect .html to .php
   RewriteRule ^(.+)\.html$ $1.php [R=301,L]
+
+  # Clean service URLs map internally to their PHP entry points.
+  RewriteRule ^home/?$ index.php [L]
+  RewriteRule ^pa-system/?$ pa-system.php [L]
+  RewriteRule ^fire-alarm-system/?$ fire-alarm-system.php [L]
+  RewriteRule ^fire-fighting-system/?$ fire-fighting-system.php [L]
+  RewriteRule ^fire-hydrant-system/?$ fire-hydrant-system.php [L]
+  RewriteRule ^fire-sprinkler-system/?$ fire-sprinkler-system.php [L]
+  RewriteRule ^fire-alarm-amc/?$ fire-alarm-amc.php [L]
+  RewriteRule ^fire-safety-audit/?$ fire-safety-audit.php [L]
+  RewriteRule ^projects/?$ projects.php [L]
+  RewriteRule ^talk-back-system/?$ talk-back-system.php [L]
+  RewriteRule ^gas-detector/?$ gas-detector.php [L]
+  RewriteRule ^eaton-products/?$ eaton-products.php [L]
+  RewriteRule ^ekavis-products/?$ ekavis-products.php [L]
+  RewriteRule ^privacy-policy/?$ privacy-policy.php [L]
+  RewriteRule ^terms-conditions/?$ terms-conditions.php [L]
+  RewriteRule ^tack-back-system/?$ talk-back-system [R=301,L]
 </IfModule>
 
 # Security headers
@@ -23,6 +54,21 @@ DirectoryIndex index.php index.html
   Header set X-Content-Type-Options "nosniff"
   Header set X-Frame-Options "SAMEORIGIN"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" "expr=%{HTTPS} == 'on'"
+  Header always set Content-Security-Policy "default-src 'self'; font-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; script-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
+</IfModule>
+
+# Protect application source and local configuration.
+<IfModule mod_authz_core.c>
+  <FilesMatch "^(\.env|\.git|\.gitignore|composer\.(json|lock)|package(-lock)?\.json|config\.php|bootstrap\.php|pages\.php)$">
+    Require all denied
+  </FilesMatch>
+</IfModule>
+
+# Never execute PHP files uploaded or placed under public asset directories.
+<IfModule mod_rewrite.c>
+  RewriteRule ^(?:assets|uploads)/.*\.php$ - [F,L,NC]
 </IfModule>
 
 # Cache static assets

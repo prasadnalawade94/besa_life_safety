@@ -22,15 +22,15 @@ $footer_id = $footer_id ?? '';
        <div style="display: flex; gap: 50px;">
     
     <ul>
-        <li><a href="<?= url('index.php') ?>">Home</a></li>
+        <li><a href="<?= e(nav_item_link('home')) ?>">Home</a></li>
         <li><a href="<?= nav_link('#about') ?>">About Us</a></li>
         <li><a href="<?= nav_link('#services') ?>">Services</a></li>
-        <li><a href="<?= page_url('eaton-products') ?>">Eaton Products</a></li>
+        <li><a href="<?= url('eaton-products') ?>">Eaton Products</a></li>
     </ul>
 
     <ul>
-        <li><a href="<?= page_url('ekavis-products') ?>">Ekavis Products</a></li>
-        <li><a href="<?= page_url('gas-detector') ?>">Gas Detector</a></li>
+        <li><a href="<?= url('ekavis-products') ?>">Ekavis Products</a></li>
+        <li><a href="<?= url('gas-detector') ?>">Gas Detector</a></li>
         <li><a href="<?= nav_link('#projects') ?>">Projects</a></li>
         <li><a href="<?= nav_link('#contact') ?>">Contact</a></li>
     </ul>
@@ -46,7 +46,7 @@ $footer_id = $footer_id ?? '';
     </div>
     <div class="container footer-bottom">
       <p>&copy; <?= date('Y') ?> BESA Life Safety Pvt. Ltd. All Rights Reserved.</p>
-      <div><a href="#">Privacy Policy</a> | <a href="#">Terms &amp; Conditions</a></div>
+      <div><a href="<?= url('privacy-policy') ?>">Privacy Policy</a> | <a href="<?= url('terms-conditions') ?>">Terms &amp; Conditions</a></div>
     </div>
   </footer>
 
@@ -58,8 +58,9 @@ $footer_id = $footer_id ?? '';
 <?php if (($quote_status ?? '') !== ''): ?>
       <p class="quote-status"><?= e($quote_status) ?></p>
 <?php endif; ?>
-      <form class="quote-form" method="post">
+      <form class="quote-form" method="post" enctype="multipart/form-data">
         <input type="hidden" name="quote_request" value="1">
+        <input type="hidden" name="quote_csrf" value="<?= e(quote_csrf_token()) ?>">
         <div class="quote-field-row">
           <label>Name
             <input type="text" name="name" required>
@@ -73,6 +74,9 @@ $footer_id = $footer_id ?? '';
         </label>
         <label>Requirement
           <textarea name="requirement" required></textarea>
+        </label>
+        <label>Attach File <span class="form-hint">PDF, JPG, PNG, DOC or DOCX up to 10 MB</span>
+          <input type="file" name="attachment" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
         </label>
         <button class="btn-primary" type="submit">Submit Enquiry</button>
       </form>

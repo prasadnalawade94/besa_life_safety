@@ -21,15 +21,26 @@ $active_nav = $active_nav ?? '';
   <nav class="navbar">
     <div class="container nav-inner">
       <div class="brand">
-        <a href="<?= nav_link('#home') ?>">
+        <a href="<?= e(nav_item_link('home')) ?>">
           <img src="<?= asset('assets/besa-logo.png') ?>" alt="BESA Logo" class="logo">
         </a>
       </div>
       <button id="mobileToggle" class="mobile-toggle" aria-label="Toggle menu"><i class="fa fa-bars"></i></button>
       <ul class="nav-links">
 <?php foreach (NAV_ITEMS as $id => $label): ?>
-        <li<?= $id === 'products' ? ' class="has-sub"' : '' ?>>
-          <a href="<?= nav_link('#' . $id) ?>"<?= nav_active($id, $active_nav) ?>><?= e($label) ?></a>
+  <li<?= isset(NAV_DROPDOWNS[$id]) ? ' class="has-sub"' : '' ?>>
+          <a href="<?= e(nav_item_link($id)) ?>"<?= nav_active($id, $active_nav) ?>><?= e($label) ?></a>
+<?php if (isset(NAV_DROPDOWNS[$id])): ?>
+    <ul class="nav-submenu">
+<?php foreach (NAV_DROPDOWNS[$id] as $submenu_item):
+    $submenu_href = $submenu_item['href'][0] === '#'
+      ? nav_link($submenu_item['href'])
+      : url($submenu_item['href']);
+?>
+      <li><a href="<?= e($submenu_href) ?>"><?= e($submenu_item['label']) ?></a></li>
+<?php endforeach; ?>
+    </ul>
+<?php endif; ?>
         </li>
 <?php endforeach; ?>
       </ul>

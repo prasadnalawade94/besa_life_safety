@@ -86,6 +86,7 @@ const navLinks = document.querySelector('.nav-links');
 function closeNav() {
   if (!navLinks) return;
   navLinks.classList.remove('open');
+  navLinks.querySelectorAll('.has-sub.open').forEach(item => item.classList.remove('open'));
   document.body.classList.remove('nav-open');
   if (mobileToggle) {
     const icon = mobileToggle.querySelector('i');
@@ -110,12 +111,52 @@ if (mobileToggle && navLinks) {
   });
 
   navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => closeNav());
+    link.addEventListener('click', event => {
+      const parentItem = link.parentElement;
+      const hasSubmenu = parentItem?.classList.contains('has-sub');
+
+      if (window.innerWidth <= 900 && hasSubmenu) {
+        event.preventDefault();
+        navLinks.querySelectorAll('.has-sub.open').forEach(item => {
+          if (item !== parentItem) item.classList.remove('open');
+        });
+        parentItem.classList.toggle('open');
+        return;
+      }
+
+      closeNav();
+    });
   });
 
   window.addEventListener('resize', () => {
     if (window.innerWidth > 900) closeNav();
   });
+}
+
+// Keep the homepage menu selection aligned with the section currently in view.
+const sectionNavLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+const navigableSections = [...sectionNavLinks]
+  .map(link => document.getElementById(link.getAttribute('href').slice(1)))
+  .filter(Boolean);
+
+if (sectionNavLinks.length && navigableSections.length) {
+  const sectionObserver = new IntersectionObserver(entries => {
+    const visibleSections = entries
+      .filter(entry => entry.isIntersecting)
+      .sort((first, second) => second.intersectionRatio - first.intersectionRatio);
+
+    if (!visibleSections.length) return;
+    const activeId = visibleSections[0].target.id;
+    sectionNavLinks.forEach(link => {
+      const isActive = link.getAttribute('href') === `#${activeId}`;
+      link.classList.toggle('active', isActive);
+    });
+  }, {
+    rootMargin: '-18% 0px -62% 0px',
+    threshold: [0, 0.25, 0.5, 0.75, 1]
+  });
+
+  navigableSections.forEach(section => sectionObserver.observe(section));
 }
 
 // Product / project carousels

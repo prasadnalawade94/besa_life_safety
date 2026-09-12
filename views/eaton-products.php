@@ -365,7 +365,7 @@
         </div>
 
         <div class="gas-page-actions">
-          <a class="btn-secondary" href="<?= nav_link('#contact') ?>">Request a Quote</a>
+          <a class="btn-secondary" href="#quote-modal" data-quote-open>Request a Quote</a>
           <a class="btn-outline" href="<?= nav_link('#catalog') ?>">Back to Products</a>
         </div>
       </div>
